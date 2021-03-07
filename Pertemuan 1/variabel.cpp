@@ -1,21 +1,34 @@
-#include<iostream>
-#include <conio.h>
+#include <iostream>
+
 using namespace std;
 
-int data1 = 100;  //variabel external
-void fungsi_satu();
-void fungsi_dua();
-int main(){
-	int data2 =200; //variabel lokal main
-	fungsi_satu();
-	fungsi_dua();
-	cout<<"Nilai data lokal main = "<<data2<<endl;
-	getch();
+// Pendeklarasian variabel eksternal
+int data = 10;
+
+void panggil_lokal_lain();
+void panggil_eksternal();
+
+int main()
+{
+    // Pendeklarasian variabel lokal pada fungsi main()
+    int data = 20;
+
+    cout << "Nilai variabel data pada fungsi main() = " << data << "\n";
+    panggil_lokal_lain();
+    panggil_eksternal();
+
+    return 0;
 }
-void fungsi_satu(){
-	int data3= 300; //variabel lokal fungsi_satu
-	cout<<"Nilai data lokal satu = "<<data3<<endl;
+
+void panggil_lokal_lain()
+{
+    // Pendeklarasian variabel lokal pada fungsi panggil_lokal_lain()
+    int data = 30;
+
+    cout << "Nilai variabel data pada fungsi panggil_lokal_lain() = " << data << "\n";
 }
-void fungsi_dua(){
-	cout<<"Nilai data external = "<<data1<<endl;
+
+void panggil_eksternal()
+{
+    cout << "Nilai variabel data eksternal adalah = " << data << "\n";
 }
