@@ -1,21 +1,34 @@
 #include<iostream>
-#include <conio.h>
+
 using namespace std;
-double hasil(int a,int b); //protytpe fungsi
+
+/*
+    Pendeklarasian fungsi baru tetapi hanya
+    berupa prototipe dengan nama hasil()
+*/
+double hasil(int a,int b);
+
+// Pendeklarasian fungsi main()
 int main()
 {
-	int x,y;
-	double z;
-	cout<<"masukan nilai x : ";
-	cin>>x;
-	cout<<"masukan nilai y : ";
-	cin>>y;
-	z=hasil (x,y);
-	cout<<"hasil perkalianya = ";
-	cout<< x << " x " << y << " = " <<z;
-	getch();
+    int a = 0, b = 0;
+    double c = 0;
+    
+    cout << "Masukan nilai a : ";
+    cin >> a;
+    
+    cout << "Masukan nilai b : ";
+    cin >> b;
+    
+    c = hasil(a, b);
+    
+    cout << "Hasil perkalian dari " << a << " x " << b << " adalah " << c;
+    
+    return 0;
 }
-double hasil (int a,int b)
+
+// Fungsi hasil()
+double hasil(int x, int y)
 {
-	return (a*b); 
+    return(x * y);
 }
