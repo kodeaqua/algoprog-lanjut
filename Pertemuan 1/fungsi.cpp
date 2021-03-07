@@ -1,16 +1,23 @@
-#include iostream
-#inclide conio.h
+#include <iostream>
+
 using namespace std;
- pembuatan fungsi garis()  
-void garis()
+
+// Pendeklarasian fungsi baru dengan nama bintang()
+void bintang()
 {
-coutn ---------------------- n;
+    cout << "\n********************************\n";
 }
- program utama 
+
+// Pendeklarasian fungsi main()
 int main()
 {
-garis();
-coutUNIVERSITAS PAKUAN BOGORendl;
-garis();
-	getch();
+    /*
+        Untuk memanggilnya kita hanya perlu
+        memanggil nama fungsinya yaitu bintang().
+    */
+    bintang();
+    cout << "ILMU KOMPUTER UNIVERSITAS PAKUAN";
+    bintang();
+
+    return 0;
 }
